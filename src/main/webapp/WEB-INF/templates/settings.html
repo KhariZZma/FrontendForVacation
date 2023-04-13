@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
-    <meta charset="UTF-8">
     <title>Настройки подразделения</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/settings.css" th:href="@{/css/settings.css}">
 </head>
 <body>
-    <h1>Профиль подраделения</h1>
+    <h1 class="header">Профиль подразделения</h1>
 
-    <div class="content">
+    <div class="container">
 
         <h2>Наименование подразделения</h2>
-        <label><input placeholder="Введите название подразделения"></label>
+        <label><input placeholder="Введите название"></label>
         <h2>Максимальное количество сотрудников одновременно уходяших в отпуск</h2>
         <label><input type="number" value="0" step="1"></label>
         <br><br>
@@ -19,8 +20,8 @@
         </form>
     </div>
     <br>
-    <div class="content">
-        <h2>Состав подразделения</h2>
+    <div class="container">
+        <h2 id="header">Состав подразделения</h2>
         <button>Добавить сотрудника</button>
         <br><br>
         <table>

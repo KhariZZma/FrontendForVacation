@@ -1,3 +1,7 @@
+html    {
+    background-color: aqua;
+}
+
 .container {
     width: 100%;
     display: flex;
@@ -6,6 +10,7 @@
 }
 
 .header {
+    font-size: 12px;
     color: red;
     background-color: black;
 }
