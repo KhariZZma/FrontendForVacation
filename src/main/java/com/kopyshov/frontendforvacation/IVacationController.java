@@ -5,7 +5,7 @@ import org.thymeleaf.web.IWebExchange;
 
 import java.io.Writer;
 
-public interface IGTVGController {
+public interface IVacationController {
     void process(final IWebExchange webExchange, final ITemplateEngine templateEngine, final Writer writer)
             throws Exception;
 }

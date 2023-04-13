@@ -6,19 +6,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ControllerMappings {
-
-    private static Map<String, IGTVGController> controllersByURL;
-
+    private static Map<String, IVacationController> controllersByURL;
 
     static {
         controllersByURL = new HashMap<>();
-        controllersByURL.put("/", new MainController());
+        controllersByURL.put("/", new IndexController());
         controllersByURL.put("/create", new DivisionController());
     }
 
-
-
-    public static IGTVGController resolveControllerForRequest(final IWebRequest request) {
+    public static IVacationController resolveControllerForRequest(final IWebRequest request) {
         final String path = request.getPathWithinApplication();
         return controllersByURL.get(path);
     }
