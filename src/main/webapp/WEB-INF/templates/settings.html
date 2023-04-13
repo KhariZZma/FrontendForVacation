@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Настройки подразделения</title>
+</head>
+<body>
+    <h1>Профиль подраделения</h1>
+
+    <div class="content">
+
+        <h2>Наименование подразделения</h2>
+        <label><input placeholder="Введите название подразделения"></label>
+        <h2>Максимальное количество сотрудников одновременно уходяших в отпуск</h2>
+        <label><input type="number" value="0" step="1"></label>
+        <br><br>
+        <form method="post" action="save-settings">
+            <button type="submit">Сохранить изменения</button>
+        </form>
+    </div>
+    <br>
+    <div class="content">
+        <h2>Состав подразделения</h2>
+        <button>Добавить сотрудника</button>
+        <br><br>
+        <table>
+            <tr>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr th:each="employee : ${employees}">
+                <td>
+                    <p th:utext="${user.family}">
+                </td>
+                <td>
+                    <p th:utext="${user.name}">
+                </td>
+                <td>
+                    <p th:utext="${user.patronymic}">
+                </td>
+                <td><button>Редактировать</button></td>
+                <td><button>Уволен</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

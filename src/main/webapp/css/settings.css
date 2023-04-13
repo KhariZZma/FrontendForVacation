@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: darkred;
+}
+
+.header {
+    color: red;
+    background-color: black;
+}
