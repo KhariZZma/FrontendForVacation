@@ -3,17 +3,17 @@
 <head>
     <title>Настройки подразделения</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" media="all" href="../../css/settings.css" th:href="@{/css/settings.css}">
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/division.css" th:href="@{/css/division.css}">
 </head>
 <body>
-    <h1 class="header">Профиль подразделения</h1>
+    <div class="container"><br><h1 class="header">ПРОФИЛЬ ПОДРАЗДЕЛЕНИЯ</h1></div>
 
     <div class="container">
+        <h2 class="headline">Наименование подразделения</h2>
+        <label><input class="headline" placeholder="Введите название"></label>
 
-        <h2>Наименование подразделения</h2>
-        <label><input placeholder="Введите название"></label>
-        <h2>Максимальное количество сотрудников одновременно уходяших в отпуск</h2>
-        <label><input type="number" value="0" step="1"></label>
+        <h2 class="headline">Максимальное количество сотрудников одновременно уходящих в отпуск</h2>
+        <label><input class="headline" type="number" value="0" step="1"></label>
         <br><br>
         <form method="post" action="save-settings">
             <button type="submit">Сохранить изменения</button>
@@ -21,29 +21,28 @@
     </div>
     <br>
     <div class="container">
-        <h2 id="header">Состав подразделения</h2>
-        <button>Добавить сотрудника</button>
-        <br><br>
-        <table>
+        <h2 class="headline">Состав подразделения</h2>
+        <button id="addBtn">Добавить сотрудника</button>
+        <table class="headline">
             <tr>
-                <th>Фамилия</th>
-                <th>Имя</th>
-                <th>Отчество</th>
+                <th class="names">Фамилия</th>
+                <th class="names">Имя</th>
+                <th class="names">Отчество</th>
                 <th></th>
                 <th></th>
             </tr>
             <tr th:each="employee : ${employees}">
                 <td>
-                    <p th:utext="${user.family}">
+                    <p th:utext="${employee.family}">
                 </td>
                 <td>
-                    <p th:utext="${user.name}">
+                    <p th:utext="${employee.name}">
                 </td>
                 <td>
-                    <p th:utext="${user.patronymic}">
+                    <p th:utext="${employee.patronymic}">
                 </td>
-                <td><button>Редактировать</button></td>
-                <td><button>Уволен</button></td>
+                <td><button class="employeeBtn">Редактировать</button></td>
+                <td><button class="employeeBtn">Уволен</button></td>
             </tr>
         </table>
     </div>

@@ -1,0 +1,55 @@
+html    {
+    background-color: #fffffe;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    display: block;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    color: #272343;
+}
+
+.headline {
+    margin-left: 15px;
+}
+
+button {
+    display: block;
+    justify-content: left;
+    margin-left: 15px;
+    font-size: 16px;
+    height: 35px;
+    color: #fffffe;
+    border-color: #6246ea;
+    background-color: #6246ea;
+}
+#addBtn{
+    justify-content: left;
+    margin-left: 15px;
+}
+input{
+    width: 250px;
+    height: 20px;
+    font-size: 14px;
+}
+
+.names {
+    border: 2px solid black;
+    width: 250px;
+}
+th {
+    width: 140px;
+}
+
+.employeeBtn {
+    width: 138px;
+    margin-left: 0;
+}

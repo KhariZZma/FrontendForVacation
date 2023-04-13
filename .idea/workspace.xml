@@ -9,13 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8264ad70-4ef3-4405-b442-70533d7fb041" name="Changes" comment="Add fixwd classes">
+    <list default="true" id="8264ad70-4ef3-4405-b442-70533d7fb041" name="Changes" comment="Rewrite Controllers and delete">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/DivisionViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/division.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/ControllerMappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/ControllerMappings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/DivisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/DivisionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/GTVGFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/MainFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/IGTVGController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/IVacationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/SecondaryServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/DivisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/DivisionSettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/try.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/division.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/settings.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +28,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,6 +78,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kopyshov.frontendforvacation" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projects\JAVA\Prototypes\FrontendForVacation\src\main\java\com\kopyshov\frontendforvacation\static" />
     </key>
@@ -188,7 +193,7 @@
       <workItem from="1681241838809" duration="1434000" />
       <workItem from="1681331541472" duration="1382000" />
       <workItem from="1681360391622" duration="50000" />
-      <workItem from="1681405417207" duration="598000" />
+      <workItem from="1681405417207" duration="4501000" />
     </task>
     <task id="LOCAL-00001" summary="Add fixwd classes">
       <created>1681405479644</created>
@@ -197,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681405479645</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rewrite Controllers and delete">
+      <created>1681406069725</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681406069725</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +217,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add fixwd classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fixwd classes" />
+    <MESSAGE value="Rewrite Controllers and delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rewrite Controllers and delete" />
   </component>
 </project>

@@ -11,7 +11,8 @@ public class ControllerMappings {
     static {
         controllersByURL = new HashMap<>();
         controllersByURL.put("/", new IndexController());
-        controllersByURL.put("/create", new DivisionController());
+        controllersByURL.put("/create", new DivisionSettingsController());
+        controllersByURL.put("/division", new DivisionViewController());
     }
 
     public static IVacationController resolveControllerForRequest(final IWebRequest request) {

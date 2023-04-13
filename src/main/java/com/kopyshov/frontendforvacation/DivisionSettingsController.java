@@ -7,7 +7,7 @@ import org.thymeleaf.web.IWebExchange;
 import java.io.Writer;
 
 
-public class DivisionController implements IVacationController {
+public class DivisionSettingsController implements IVacationController {
 
     @Override
     public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) throws Exception {
