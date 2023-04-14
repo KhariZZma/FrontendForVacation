@@ -1,15 +1,19 @@
-html    {
-    background-color: #fffffe;
+html {
+    background-color: #bae8e8;
     font-family: Arial, sans-serif;
 }
 
 .container {
-    width: 60%;
-    margin: auto;
+    width: 70%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 15px;
     padding-top: 5px;
     display: block;
     justify-content: center;
+    background-color: #fffffe;
+    border-radius: 10px;
 }
 
 .header {
@@ -26,10 +30,12 @@ button {
     justify-content: left;
     margin-left: 15px;
     font-size: 16px;
-    height: 35px;
+    height: 40px;
     color: #fffffe;
-    border-color: #6246ea;
-    background-color: #6246ea;
+    border: 0;
+    border-radius: 10px;
+    background-color: #3da9fc;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #addBtn{
     justify-content: left;
@@ -42,9 +48,22 @@ input{
 }
 
 .names {
-    border: 2px solid black;
+    border: 2px solid white;
     width: 250px;
+    background: #BCEBDD;
+    color: white;
+    text-shadow: 0 1px 1px #2D2020;
+    padding: 10px 20px;
 }
+
+table {
+    margin-top: 5px;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+}
+
 th {
     width: 140px;
 }
@@ -52,4 +71,16 @@ th {
 .employeeBtn {
     width: 138px;
     margin-left: 0;
+}
+
+td select, option {
+    font-size: 16px;
+    display: flex;
+    height: 35px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: #fffffe;
+    border: 0;
+    background-color: #3da9fc;
 }

@@ -13,13 +13,12 @@
         <label><input class="headline" placeholder="Введите название"></label>
 
         <h2 class="headline">Максимальное количество сотрудников одновременно уходящих в отпуск</h2>
-        <label><input class="headline" type="number" value="0" step="1"></label>
+        <label><input class="headline" type="number" min="0" value="0" step="1"></label>
         <br><br>
         <form method="post" action="save-settings">
             <button type="submit">Сохранить изменения</button>
         </form>
     </div>
-    <br>
     <div class="container">
         <h2 class="headline">Состав подразделения</h2>
         <button id="addBtn">Добавить сотрудника</button>
@@ -28,18 +27,27 @@
                 <th class="names">Фамилия</th>
                 <th class="names">Имя</th>
                 <th class="names">Отчество</th>
+                <th class="names">Доступ</th>
                 <th></th>
                 <th></th>
             </tr>
             <tr th:each="employee : ${employees}">
                 <td>
-                    <p th:utext="${employee.family}">
+                    <p th:utext="${employee.surname()}">
                 </td>
                 <td>
-                    <p th:utext="${employee.name}">
+                    <p th:utext="${employee.firstName()}">
                 </td>
                 <td>
-                    <p th:utext="${employee.patronymic}">
+                    <p th:utext="${employee.patronymic()}">
+                </td>
+                <td>
+                    <label>
+                        <select size="1" th:value="${employee.role()}">
+                            <option value="lim_access">ограничен</option>
+                            <option value="full_access">полный</option>
+                        </select>
+                    </label>
                 </td>
                 <td><button class="employeeBtn">Редактировать</button></td>
                 <td><button class="employeeBtn">Уволен</button></td>
