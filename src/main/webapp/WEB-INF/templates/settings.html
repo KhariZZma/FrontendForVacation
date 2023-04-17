@@ -3,56 +3,98 @@
 <head>
     <title>Настройки подразделения</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" media="all" href="../../css/division.css" th:href="@{../../css/division.css}">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{css/settings.css}">
 </head>
 <body>
-    <div class="container"><br><h1 class="header">ПРОФИЛЬ ПОДРАЗДЕЛЕНИЯ</h1></div>
-
+    <div class="container"><h1 class="header">ПРОФИЛЬ ПОДРАЗДЕЛЕНИЯ</h1></div>
     <div class="container">
         <h2 class="headline">Наименование подразделения</h2>
-        <label><input class="headline" placeholder="Введите название"></label>
-
+        <label><input id="input_division" placeholder="Введите название подразделения/организации"></label>
+        <p class="explanation">Здесь вы указываете название вашей организации или наименование подразделения (отдела).</p>
+        <p class="explanation">Желательно указывать сокращенное название, так как оно будет находиться в заголовке.</p>
         <h2 class="headline">Максимальное количество сотрудников одновременно уходящих в отпуск</h2>
-        <label><input class="headline" type="number" min="0" value="0" step="1"></label>
-        <br><br>
+        <label><input id="input_num" type="number" min="0" value="0" step="1"></label>
+        <p class="explanation">Укажите максимум работников, которые могут выйти в отпуск одновременно</p>
+        <p class="explanation">Если установить количество сотрудников "0", то ограничения снимутся</p>
         <form method="post" action="save-settings">
             <button type="submit">Сохранить изменения</button>
         </form>
     </div>
     <div class="container">
         <h2 class="headline">Состав подразделения</h2>
-        <button id="addBtn">Добавить сотрудника</button>
+        <button id="addBtn" onclick="addEmployee()">Добавить сотрудника</button>
         <table class="headline">
-            <tr>
-                <th class="names">Фамилия</th>
-                <th class="names">Имя</th>
-                <th class="names">Отчество</th>
-                <th class="names">Доступ</th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr th:each="employee : ${employees}">
-                <td>
-                    <p th:utext="${employee.surname()}">
-                </td>
-                <td>
-                    <p th:utext="${employee.firstName()}">
-                </td>
-                <td>
-                    <p th:utext="${employee.patronymic()}">
-                </td>
-                <td>
-                    <label>
-                        <select size="1" th:value="${employee.role()}">
-                            <option value="lim_access">ограничен</option>
-                            <option value="full_access">полный</option>
-                        </select>
-                    </label>
-                </td>
-                <td><button class="employeeBtn">Редактировать</button></td>
-                <td><button class="employeeBtn">Уволен</button></td>
-            </tr>
+            <thead>
+                <tr>
+                    <th class="names">Фамилия</th>
+                    <th class="names">Имя</th>
+                    <th class="names">Отчество</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee : ${employees}">
+                    <td class="td_data" th:id="'surname-' + ${employee.id()}" th:text="${employee.surname()}"></td>
+                    <td class="td_data" th:id="'first_name-' + ${employee.id()}" th:text="${employee.firstName()}"></td>
+                    <td class="td_data" th:id="'patronymic-' + ${employee.id()}" th:text="${employee.patronymic()}"></td>
+                    <td th:id="'edit_button-' + ${employee.id()}"><button type="button" onclick="toggleForm(this)" >Редактировать</button></td>
+                    <form action="/create" method="post">
+                        <td class="td_data" style="display: none"><label><input type="text" name="employee-id" th:value="${employee.id()}" hidden="hidden"></label></td>
+                        <td class="td_data" style="display: none" th:id="'edit_surname-' + ${employee.id()}"><label><input type="text" name="surname" th:value="${employee.surname()}" /></label></td>
+                        <td class="td_data" style="display: none" th:id="'edit_first_name-' + ${employee.id()}"><label><input type="text" name="first-name" th:value="${employee.firstName()}" /></label></td>
+                        <td class="td_data" style="display: none" th:id="'edit_patronymic-' + ${employee.id()}"><label><input type="text" name="patronymic" th:value="${employee.patronymic()}" /></label></td>
+                        <td style="display: none" th:id="'save_button-' + ${employee.id()}">
+                            <button type="submit">Сохранить</button>
+                        </td>
+                        <td style="display: none" th:id="'delete_button-' + ${employee.id()}">
+                            <button type="submit">Уволить</button>
+                        </td>
+                    </form>
+                </tr>
+                <form action="/create" method="post">
+                    <td class="add_data" style="display: none"><label><input type="text" name="surname" /></label></td>
+                    <td class="add_data" style="display: none"><label><input type="text" name="first-name" /></label></td>
+                    <td class="add_data" style="display: none"><label><input type="text" name="patronymic" /></label></td>
+                    <td id="no_pad_btn1" class="add_data" style="display: none">
+                        <button type="submit">Сохранить</button>
+                    </td>
+                    <td id="no_pad_btn2" class="add_data" style="display: none">
+                        <button onclick="cancelSave()" type="button">Отмена</button>
+                    </td>
+                </form>
+            </tbody>
         </table>
     </div>
+    <script th:inline="javascript">
+        function toggleForm(button) {
+            const cell = button.parentNode;
+            const id = cell.id.split("-")[1];
+            document.getElementById("surname-" + id).style.display = "none";
+            document.getElementById("first_name-" + id).style.display = "none";
+            document.getElementById("patronymic-" + id).style.display = "none";
+            document.getElementById("edit_button-" + id).style.display = "none";
+
+            document.getElementById("edit_surname-" + id).style.display = "table-cell";
+            document.getElementById("edit_first_name-" + id).style.display = "table-cell";
+            document.getElementById("edit_patronymic-" + id).style.display = "table-cell";
+            document.getElementById("save_button-" + id).style.display = "table-cell";
+            document.getElementById("delete_button-" + id).style.display = "table-cell";
+        }
+
+        function addEmployee() {
+            let elements = document.getElementsByClassName("add_data");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = "table-cell";
+            }
+        }
+
+        function cancelSave() {
+            let elements = document.getElementsByClassName("add_data");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -8,13 +8,16 @@ import java.util.Map;
 
 public class ControllerMappings {
     private static Map<String, IVacationController> controllersByURL;
-    private static ArrayList<Employee> employees;
+    private static HashMap<String, Employee> employees;
+    private static Integer idGenerator;
 
     static {
+        idGenerator = 7;
         controllersByURL = new HashMap<>();
         controllersByURL.put("/", new IndexController());
         controllersByURL.put("/create", new DivisionSettingsController());
         controllersByURL.put("/division", new DivisionViewController());
+        controllersByURL.put("/signform", new SignformController());
 
         createDatabase();
     }
@@ -31,24 +34,29 @@ public class ControllerMappings {
     }
 
     private static void createDatabase() {
-        employees = new ArrayList<>();
+        employees = new HashMap<>();
 
-        Employee emp1 = new Employee("Петров", "Дмитрий", "Дмитриевич", "полный");
-        Employee emp2 = new Employee("Иванов", "Василий", "Васильевич", "ограничен");
-        Employee emp3 = new Employee("Сидоров", "Алексей", "Алексеевич", "ограничен");
-        Employee emp4 = new Employee("Петрова", "Дарья", "Дмитриевна", "ограничен");
-        Employee emp5 = new Employee("Иванова", "Екатерина", "Васильевна", "ограничен");
-        Employee emp6 = new Employee("Сидорова", "Юлия", "Алексеевна", "ограничен");
+        Employee emp1 = new Employee("1", "Петров", "Дмитрий", "Дмитриевич");
+        Employee emp2 = new Employee("2", "Иванов", "Василий", "Васильевич");
+        Employee emp3 = new Employee("3", "Сидоров", "Алексей", "Алексеевич");
+        Employee emp4 = new Employee("4","Петрова", "Дарья", "Дмитриевна");
+        Employee emp5 = new Employee("5","Иванова", "Екатерина", "Васильевна");
+        Employee emp6 = new Employee("6","Сидорова", "Юлия", "Алексеевна");
 
-        employees.add(emp1);
-        employees.add(emp2);
-        employees.add(emp3);
-        employees.add(emp4);
-        employees.add(emp5);
-        employees.add(emp6);
+        employees.put("1", emp1);
+        employees.put("2", emp2);
+        employees.put("3", emp3);
+        employees.put("4", emp4);
+        employees.put("5", emp5);
+        employees.put("6", emp6);
     }
 
-    public static ArrayList<Employee> getEmployees() {
+    public static HashMap<String, Employee> getEmployees() {
         return employees;
+    }
+
+    public static String generateId() {
+        idGenerator++;
+        return idGenerator.toString();
     }
 }

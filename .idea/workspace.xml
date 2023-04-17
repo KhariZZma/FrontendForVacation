@@ -10,8 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8264ad70-4ef3-4405-b442-70533d7fb041" name="Changes" comment="Add division view">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/SignformController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/division.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/division.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/ControllerMappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/ControllerMappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/DivisionSettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/DivisionSettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kopyshov/frontendforvacation/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/division.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/localProperies.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/signform.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/localProperies_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/localProperies_ru.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/division.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,31 +64,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projects/JAVA/Prototypes/FrontendForVacation/src/main/java/com/kopyshov/frontendforvacation/static&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.31724137&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Projects/JAVA/Prototypes/FrontendForVacation/src/main/resources/static",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.31724137",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.kopyshov.frontendforvacation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\JAVA\Prototypes\FrontendForVacation\src\main\resources\static" />
       <recent name="C:\Projects\JAVA\Prototypes\FrontendForVacation\src\main\java\com\kopyshov\frontendforvacation\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -190,7 +204,11 @@
       <workItem from="1681405417207" duration="9360000" />
       <workItem from="1681491321968" duration="4952000" />
       <workItem from="1681498315285" duration="135000" />
-      <workItem from="1681498522825" duration="243000" />
+      <workItem from="1681498522825" duration="2371000" />
+      <workItem from="1681554324980" duration="10016000" />
+      <workItem from="1681585056355" duration="12680000" />
+      <workItem from="1681628737839" duration="37444000" />
+      <workItem from="1681751345166" duration="7719000" />
     </task>
     <task id="LOCAL-00001" summary="Add fixwd classes">
       <created>1681405479644</created>
@@ -220,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681498362067</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add division view">
+      <created>1681499114216</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681499114216</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
