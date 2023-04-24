@@ -14,7 +14,7 @@ import java.util.List;
 public class WorkViewController implements IVacationController {
     private static final String ALL_EMPLOYEES = "from Employee";
     @Override
-    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) throws Exception {
+    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) {
         WebContext ctx = new WebContext(webExchange, webExchange.getLocale());
         List employees;
 

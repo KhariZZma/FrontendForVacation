@@ -24,9 +24,8 @@ public class Main {
         return ourSessionFactory.openSession();
     }
 
-    public static void main(final String[] args) throws Exception {
-        final Session session = getSession();
-        try {
+    public static void main(final String[] args) {
+        try (Session session = getSession()) {
             System.out.println("querying all the managed entities...");
             final Map metadataMap = session.getSessionFactory().getAllClassMetadata();
             for (Object key : metadataMap.keySet()) {
@@ -38,8 +37,6 @@ public class Main {
                     System.out.println("  " + o);
                 }
             }
-        } finally {
-            session.close();
         }
     }
 }

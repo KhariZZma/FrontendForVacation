@@ -3,7 +3,6 @@ package com.kopyshov.frontendforvacation.model;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -68,7 +67,4 @@ public class Employee implements Serializable {
         return vacations;
     }
 
-    public void setVacations(Set<Vacation> vacations) {
-        this.vacations = vacations;
-    }
 }

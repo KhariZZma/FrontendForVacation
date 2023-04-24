@@ -8,7 +8,7 @@ import java.io.Writer;
 
 public class SignformController implements IVacationController {
     @Override
-    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) throws Exception {
+    public void process(IWebExchange webExchange, ITemplateEngine templateEngine, Writer writer) {
         WebContext ctx = new WebContext(webExchange, webExchange.getLocale());
         templateEngine.process("signform", ctx, writer);
     }
