@@ -1,5 +1,6 @@
 package com.kopyshov.frontendforvacation;
 
+import com.kopyshov.frontendforvacation.controllers.IVacationController;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;

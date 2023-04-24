@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: grid;
+    grid: 50px auto / auto auto auto;
+    gap: 10px;
+    justify-items: stretch;
+    height: 100vh;
+    background-color: aqua;
+}
+
+#header {
+    background-color: black;
+    grid-column: 1 / 9;
+    color: white;
+}
+
+#calendar-box {
+    background-color: #e9e9e9;
+    grid-column: 1 / 1;
+}
+
+#work-box {
+    background-color: #e9e9e9;
+    grid-column: 2 / 8;
+}
+
+#employees-list-box {
+    background-color: #e9e9e9;
+    grid-column: 8 / 8;
+}
+
+tr:hover {
+    background-color: blue;
+    color: white;
+}

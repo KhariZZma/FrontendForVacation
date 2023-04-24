@@ -1,4 +1,4 @@
-package com.kopyshov.frontendforvacation;
+package com.kopyshov.frontendforvacation.controllers;
 
 import java.io.*;
 

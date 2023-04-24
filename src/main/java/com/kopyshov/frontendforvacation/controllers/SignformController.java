@@ -1,4 +1,4 @@
-package com.kopyshov.frontendforvacation;
+package com.kopyshov.frontendforvacation.controllers;
 
 import org.thymeleaf.ITemplateEngine;
 import org.thymeleaf.context.WebContext;

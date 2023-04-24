@@ -61,11 +61,15 @@ button {
     padding: 4px;
     margin-top: 5px;
     width: 100px;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
 }
 
 button:hover {
     background-color: blue;
+}
+
+button:active {
+    box-shadow: inset 0px 10px 10px rgba(0,0,0,0.5);
 }
 
 table {

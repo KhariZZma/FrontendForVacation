@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рабочее окно</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/workview.css" th:href="@{css/workview.css}">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="header">Голова</div>
+    <div id="calendar-box">Календари</div>
+    <div id="work-box">Рабочая область</div>
+    <div id="employees-list-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Работники</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee : ${employees}">
+                    <td class="employee_list" th:text="${employee.getSurname()}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</body>
+</html>

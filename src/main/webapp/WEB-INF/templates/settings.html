@@ -35,19 +35,19 @@
             </thead>
             <tbody>
                 <tr th:each="employee : ${employees}">
-                    <td class="td_data" th:id="'surname-' + ${employee.id()}" th:text="${employee.surname()}"></td>
-                    <td class="td_data" th:id="'first_name-' + ${employee.id()}" th:text="${employee.firstName()}"></td>
-                    <td class="td_data" th:id="'patronymic-' + ${employee.id()}" th:text="${employee.patronymic()}"></td>
-                    <td th:id="'edit_button-' + ${employee.id()}"><button type="button" onclick="toggleForm(this)" >Редактировать</button></td>
+                    <td class="td_data" th:id="'surname-' + ${employee.getId()}" th:text="${employee.getSurname()}"></td>
+                    <td class="td_data" th:id="'first_name-' + ${employee.getId()}" th:text="${employee.getFirstName()}"></td>
+                    <td class="td_data" th:id="'patronymic-' + ${employee.getId()}" th:text="${employee.getPatronymic()}"></td>
+                    <td th:id="'edit_button-' + ${employee.getId()}"><button type="button" onclick="toggleForm(this)" >Редактировать</button></td>
                     <form action="/create" method="post">
-                        <td class="td_data" style="display: none"><label><input type="text" name="employee-id" th:value="${employee.id()}" hidden="hidden"></label></td>
-                        <td class="td_data" style="display: none" th:id="'edit_surname-' + ${employee.id()}"><label><input type="text" name="surname" th:value="${employee.surname()}" /></label></td>
-                        <td class="td_data" style="display: none" th:id="'edit_first_name-' + ${employee.id()}"><label><input type="text" name="first-name" th:value="${employee.firstName()}" /></label></td>
-                        <td class="td_data" style="display: none" th:id="'edit_patronymic-' + ${employee.id()}"><label><input type="text" name="patronymic" th:value="${employee.patronymic()}" /></label></td>
-                        <td style="display: none" th:id="'save_button-' + ${employee.id()}">
+                        <td class="td_data" style="display: none"><label><input type="text" name="employee-id" th:value="${employee.getId()}" hidden="hidden"></label></td>
+                        <td class="td_data" style="display: none" th:id="'edit_surname-' + ${employee.getId()}"><label><input type="text" name="surname" th:value="${employee.getSurname()}" /></label></td>
+                        <td class="td_data" style="display: none" th:id="'edit_first_name-' + ${employee.getId()}"><label><input type="text" name="first-name" th:value="${employee.getFirstName()}" /></label></td>
+                        <td class="td_data" style="display: none" th:id="'edit_patronymic-' + ${employee.getId()}"><label><input type="text" name="patronymic" th:value="${employee.getPatronymic()}" /></label></td>
+                        <td style="display: none" th:id="'save_button-' + ${employee.getId()}">
                             <button type="submit">Сохранить</button>
                         </td>
-                        <td style="display: none" th:id="'delete_button-' + ${employee.id()}">
+                        <td style="display: none" th:id="'delete_button-' + ${employee.getId()}">
                             <button type="submit">Уволить</button>
                         </td>
                     </form>
